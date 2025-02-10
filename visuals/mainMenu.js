@@ -94,9 +94,9 @@ dropdownMenu.innerHTML = `
     <style>
         input[type="checkbox"] {appearance: none; width: 15px; height: 15px; background-color: #3a3a3b;
         border: 1px solid #acacac; border-radius: 3px; margin-right: 5px; cursor: pointer;}
-        input[type="checkbox"]:checked {background-color: #037dff; border-color: #720fb8;}
+        input[type="checkbox"]:checked {background-color: #037dff; border-color: #037dff;}
         input[type="text"], input[type="number"], input[type="range"] {width: calc(100% - 10px); border: 1px solid #343434; 
-        color: white; accent-color: #540b8a; background-color: #540b8a; padding: 3px; border-radius: 3px; background: none;}
+        color: white; accent-color: #043891; background-color: #043891; padding: 3px; border-radius: 3px; background: none;}
         label {display: flex; align-items: center; color: #3a3a3b; padding-top: 3px;}
     </style>
 `;
@@ -104,7 +104,7 @@ dropdownMenu.innerHTML = `
 watermark.appendChild(dropdownMenu);
 
 let featuresList = [
-    [{ name: 'BypassQuestoes', type: 'checkbox', variable: 'features.questionSpoof', attributes: 'checked', labeled: true, label: 'Question Bypass' },
+    [{ name: 'Question Bypass', type: 'checkbox', variable: 'features.questionSpoof', attributes: 'checked', labeled: true, label: 'Question Bypass' },
     { name: 'videoSpoof', type: 'checkbox', variable: 'features.videoSpoof', attributes: 'checked', labeled: true, label: 'Video Spoof' },
     { name: 'showAnswers', type: 'checkbox', variable: 'features.showAnswers', labeled: true, label: 'Answer Revealer' }],
     [{ name: 'autoAnswer', type: 'checkbox', variable: 'features.autoAnswer', dependent: 'autoAnswerDelay,nextRecomendation,repeatQuestion', labeled: true, label: 'Auto Answer' },
