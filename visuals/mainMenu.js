@@ -71,7 +71,9 @@ Object.assign(watermark.style, {
 
 if (device.mobile) watermark.style.left = '55%'
 
-watermark.innerHTML = `<img src="https://i.postimg.cc/qRr1tTWm/imagem-2025-02-10-182559410.png" 
+let ver = "V0.0.1";
+
+watermark.innerHTML = `<img src="https://i.postimg.cc/dqkpxQ6K/imagem-2025-02-10-182559410.png" 
 style="width: 25px; height: 25px; border-radius: 5px;"> 
 <span style="color:gray; padding-left:2px; font-family: Arial, sans-serif; font-size:10px">${ver}</span>`;
 
