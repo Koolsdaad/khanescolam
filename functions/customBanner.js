@@ -1,10 +1,10 @@
 const phrases = [ 
-    "[🌿] Non Skeetless dude.",
-    "[🌿] Khanware on top.",
-    "[🌿] Nix said hello!",
-    "[🌿] God i wish i had Khanware.",
-    "[🌿] Get good get Khanware!",
-    "[🌿] khanware.space goes brrrrr" 
+    "ta gostando do hack?",
+    "eu sei, eeu sou o melhor",
+    "baum dia",
+    "aproveite",
+    "bom pra vc",
+    "sério, para de me chamar a cada 0.5 segundos" 
 ];
 
 setInterval(() => { 
