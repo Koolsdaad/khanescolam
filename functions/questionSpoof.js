@@ -1,9 +1,9 @@
 const phrases = [ 
-    "mantem isso longe dos professores",
-    "sério, para de me chamar a cada 0.5 segundos",
-    "ta gostando do hack?",
-    "ta me devendo 10 pila",
-    "de nada ;)",
+    "Lunaris é o melhor",
+    "Use a vontade.",
+    "Dúvidas? Entre no nosso servidor do discord.",
+    ";)",
+    "Feito Por: Moony",
 ];
 
 const originalFetch = window.fetch;
