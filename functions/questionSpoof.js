@@ -1,5 +1,5 @@
 const phrases = [ 
-    "safadu vc né",
+    "mantem isso longe dos professores",
     "sério, para de me chamar a cada 0.5 segundos",
     "ta gostando do hack?",
     "ta me devendo 10 pila",
