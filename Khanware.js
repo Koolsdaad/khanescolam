@@ -33,7 +33,7 @@ window.features = {
     nextRecomendation: false,
     repeatQuestion: false,
     minuteFarmer: false,
-    rgbLogo: false
+    rgbLogo: true
 };
 window.featureConfigs = {
     autoAnswerDelay: 3,
