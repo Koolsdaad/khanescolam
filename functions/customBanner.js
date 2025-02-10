@@ -1,6 +1,6 @@
 const phrases = [ 
-    "ta gostando do hack?",
-    "eu sei, eeu sou o melhor",
+    "relaxa, não to hackeando tua conta *vendo a senha* ",
+    "oq achou?",
     "baum dia",
     "aproveite",
     "bom pra vc",
