@@ -1,10 +1,8 @@
 const phrases = [ 
-    "relaxa, não to hackeando tua conta *vendo a senha* ",
-    "oq achou?",
-    "baum dia",
-    "aproveite",
-    "bom pra vc",
-    "sério, para de me chamar a cada 0.5 segundos" 
+    "Aproveite o Lunaris",
+    "Mantenha isso longe de professores.",
+    "Lunaris",
+    "Dúvidas? Entre no nosso discord."
 ];
 
 setInterval(() => { 
