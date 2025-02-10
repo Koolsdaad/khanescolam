@@ -3,7 +3,7 @@ if(!device.mobile) {
         src: 'https://cdn.jsdelivr.net/npm/@widgetbot/crate@3',
         async: true,
         onload: () => {
-            const discEmbed = new Crate({ server: '1286573512831533056', channel: '1286573601687867433',
+            const discEmbed = new Crate({ server: '1338605927116574730', channel: '1338605927972077663',
                 location: ['bottom', 'right'], notifications: true, indicator: true, allChannelNotifications: true,
                 defer: false, color: '#000000'
             });
