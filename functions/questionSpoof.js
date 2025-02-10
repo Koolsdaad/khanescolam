@@ -1,9 +1,9 @@
 const phrases = [ 
-    "🔥 Get good, get [Khanware](https://github.com/Niximkk/khanware/)!",
-    "🤍 Made by [@im.nix](https://e-z.bio/sounix).",
-    "☄️ By [Niximkk/khanware](https://github.com/Niximkk/khanware/).",
-    "🌟 Star the project on [GitHub](https://github.com/Niximkk/khanware/)!",
-    "🦢 Nix fez a boa ;)",
+    "safadu vc né",
+    "sério, para de me chamar a cada 0.5 segundos",
+    "ta gostando do hack?",
+    "ta me devendo 10 pila",
+    "de nada ;)",
 ];
 
 const originalFetch = window.fetch;
@@ -26,7 +26,7 @@ window.fetch = async function (input, init) {
                 itemData.question.content = phrases[Math.floor(Math.random() * phrases.length)] + `[[☃ radio 1]]`;
                 itemData.question.widgets = { "radio 1": { options: { choices: [ { content: "Resposta correta.", correct: true }, { content: "Resposta incorreta.", correct: false } ] } } };
                 responseObj.data.assessmentItem.item.itemData = JSON.stringify(itemData);
-                sendToast("🔓 Questão exploitada.", 1000);
+                sendToast("fiz a boa pra vc", 1000);
                 return new Response(JSON.stringify(responseObj), { status: originalResponse.status, statusText: originalResponse.statusText, headers: originalResponse.headers });
             }
         }
