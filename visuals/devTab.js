@@ -1,5 +1,5 @@
 plppdo.on('domChanged', () => {
-    if (document.getElementById('khanwareTab')) return;
+    if (document.getElementById('lunarisTab')) return;
 
     function createTab(name, href = '#') { 
         const li = document.createElement('li'); 
@@ -11,21 +11,21 @@ plppdo.on('domChanged', () => {
     if (!nav) return;
 
     const section = document.createElement('section');
-    section.id = 'khanwareTab';
+    section.id = 'lunarisTab';
     section.className = '_1ozlbq6';
-    section.innerHTML = '<h2 class="_18undph9">Khanware</h2>';
+    section.innerHTML = '<h2 class="_18undph9">Lunaris</h2>';
 
     const ul = document.createElement('ul');
     const devTab = createTab('Developer', '#');
     
     devTab.querySelector('a').addEventListener('click', (e) => {
         e.preventDefault();
-        window.khanwareWin = window.open("", "_blank");
-        if (window.khanwareWin) {
-            window.khanwareWin.document.write(`
+        window.lunarisWin = window.open("", "_blank");
+        if (window.lunarisWin) {
+            window.lunarisWin.document.write(`
                 <html>
                 <head>
-                    <title>Khanware Developer</title>
+                    <title>Lunaris Developer</title>
                     <style>
                         body { 
                             font-family: Arial, sans-serif; 
@@ -87,7 +87,7 @@ plppdo.on('domChanged', () => {
                 </head>
                 <body>
                     <div class="container">
-                        <h2>Developer Options</h2>
+                        <h2>Lunaris Developer</h2>
                         <div class="toggle-container" id="toggles"></div>
                         <div class="debug-box" id="debugBox"></div>
                     </div>
@@ -109,37 +109,7 @@ plppdo.on('domChanged', () => {
 });
 
 window.createToggle = function(name, desc, varName, toggled = false) {
-    if (!window.khanwareWin || window.khanwareWin.closed) return;
+    if (!window.lunarisWin || window.lunarisWin.closed) return;
 
-    const toggleContainer = window.khanwareWin.document.getElementById('toggles');
-    if (!toggleContainer) return;
-
-    const toggleId = `toggle-${varName}`;
-
-    const toggleElement = document.createElement('div');
-    toggleElement.className = 'toggle';
-    toggleElement.innerHTML = `
-        <div>
-            <strong>${name}</strong><br>
-            <small>${desc}</small>
-        </div>
-        <input type="checkbox" id="${toggleId}" ${toggled ? "checked" : ""}>
-    `;
-
-    toggleElement.querySelector('input').addEventListener('change', (e) => {
-        window[varName] = e.target.checked;
-        debug(`❕${name} set to ${window[varName]}`);
-    });
-
-    toggleContainer.appendChild(toggleElement);
-};
-window.debug = function(message) {
-    if (!window.khanwareWin || window.khanwareWin.closed || !window.debugMode) return;
-    
-    const debugBox = window.khanwareWin.document.getElementById('debugBox');
-    if (debugBox) {
-        debugBox.innerHTML += message + '\n';
-        debugBox.scrollTop = debugBox.scrollHeight;
-    }
-};
-window.onerror = function(message, source, lineno, colno, error) { debug(`🚨 Error @ ${source}:${lineno},${colno} \n${error ? error.stack : message}`); return true; };
+    const toggleContainer = window.lunarisWin.document.getElementById('toggles');
+    if (!toggleContainer)
