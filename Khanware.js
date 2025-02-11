@@ -1,5 +1,5 @@
 const ver = "V0.0.1";
-const repoPath = "https://raw.githubusercontent.com/Koolsdaad/khanescolam/refs/heads/main/"
+const repoPath = "https://raw.githubusercontent.com/Niximkk/Khanware/refs/heads/main/"
 
 
 let device = {
@@ -33,7 +33,7 @@ window.features = {
     nextRecomendation: false,
     repeatQuestion: false,
     minuteFarmer: false,
-    rgbLogo: true
+    rgbLogo: false
 };
 window.featureConfigs = {
     autoAnswerDelay: 3,
@@ -61,53 +61,12 @@ new MutationObserver((mutationsList) => { for (let mutation of mutationsList) if
 window.debug = function(text) { /* QuickFix */}
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 const playAudio = url => { const audio = new Audio(url); audio.play(); debug(`🔊 Playing audio from ${url}`); };
-const findAndClickByClass = className => { const element = document.querySelector(`.${className}`); if (element) { element.click(); sendToast(`⭕ Pressionando ${className}...`, 1000); } }
+const findAndClickByClass = className => { const element = document.querySelector(`.${className}`); if (element) { element.click(); sendToast(`Auto Fazendo ${className}...`, 1000); } }
 
 function sendToast(text, duration=5000, gravity='bottom') { Toastify({ text: text, duration: duration, gravity: gravity, position: "center", stopOnFocus: true, style: { background: "#000000" } }).showToast(); debug(text); };
 
-async function showSplashScreen() {
-    // Adiciona a logo do Lunaris ao lado da palavra "LUNARIS"
-    splashScreen.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;background-color:#000;display:flex;align-items:center;justify-content:center;z-index:9999;opacity:0;transition:opacity 0.5s ease;user-select:none;color:white;font-family:MuseoSans,sans-serif;font-size:30px;text-align:center;";
-
-    // HTML modificado para incluir a logo do Lunaris à esquerda do texto
-    splashScreen.innerHTML = `
-        <div style="display: flex; align-items: center; justify-content: center;">
-            <img src="https://i.ibb.co/5h9MHdm3/imagem-2025-02-10-204310086.png" alt="Logo Lunaris" style="width: 50px; height: 50px; margin-right: 15px;" />
-            <span style="color:#0044ff;">LUNARIS</span>
-        </div>
-    `;
-
-    document.body.appendChild(splashScreen);
-    setTimeout(() => splashScreen.style.opacity = '1', 10);
-}
-
-async function hideSplashScreen() {
-    splashScreen.style.opacity = '0';
-    setTimeout(() => splashScreen.remove(), 1000);
-};
-
-    `;
-
-    document.body.appendChild(splashScreen);
-    setTimeout(() => splashScreen.style.opacity = '1', 10);
-}
-
-async function hideSplashScreen() {
-    splashScreen.style.opacity = '0';
-    setTimeout(() => splashScreen.remove(), 1000);
-};
-
-    `;
-
-    document.body.appendChild(splashScreen);
-    setTimeout(() => splashScreen.style.opacity = '1', 10);
-}
-
-async function hideSplashScreen() {
-    splashScreen.style.opacity = '0';
-    setTimeout(() => splashScreen.remove(), 1000);
-};
-
+async function showSplashScreen() { splashScreen.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;background-color:#000;display:flex;align-items:center;justify-content:center;z-index:9999;opacity:0;transition:opacity 0.5s ease;user-select:none;color:white;font-family:MuseoSans,sans-serif;font-size:30px;text-align:center;"; splashScreen.innerHTML = '<span style="color:white;"></span><span style="color:##165af7;">LUNARIS</span>'; document.body.appendChild(splashScreen); setTimeout(() => splashScreen.style.opacity = '1', 10);};
+async function hideSplashScreen() { splashScreen.style.opacity = '0'; setTimeout(() => splashScreen.remove(), 1000); };
 
 async function loadScript(url, label) { return fetch(url).then(response => response.text()).then(script => { loadedPlugins.push(label); eval(script); }); }
 async function loadCss(url) { return new Promise((resolve) => { const link = document.createElement('link'); link.rel = 'stylesheet'; link.type = 'text/css'; link.href = url; link.onload = () => resolve(); document.head.appendChild(link); }); }
@@ -133,7 +92,7 @@ function setupMain(){
 }
 
 /* Inject */
-if (!/^https?:\/\/([a-z0-9-]+\.)?khanacademy\.org/.test(window.location.href)) { alert("hmmm, não funcionou, tenta me chamar que eu arrumo\n\nVocê precisa executar o Khanware no site do Khan Academy seu burro (https://pt.khanacademy.org/)"); window.location.href = "https://pt.khanacademy.org/"; }
+if (!/^https?:\/\/([a-z0-9-]+\.)?khanacademy\.org/.test(window.location.href)) { alert("❌ Lunaris Failed to Injected!\n\nVocê precisa executar o Khanware no site do Khan Academy! (https://pt.khanacademy.org/)"); window.location.href = "https://pt.khanacademy.org/"; }
 
 showSplashScreen();
 
@@ -153,7 +112,7 @@ loadScript('https://cdn.jsdelivr.net/npm/toastify-js', 'toastifyPlugin')
     
     sendToast(`Olá ${user.nickname}`);
     
-    loadedPlugins.forEach(plugin => sendToast(` ${plugin} carregou`, 2000, 'top') );
+    loadedPlugins.forEach(plugin => sendToast(`🪝 ${plugin} Loaded!`, 2000, 'top') );
     
     hideSplashScreen();
     setupMenu();
@@ -161,3 +120,4 @@ loadScript('https://cdn.jsdelivr.net/npm/toastify-js', 'toastifyPlugin')
     
     console.clear();
 });
+
