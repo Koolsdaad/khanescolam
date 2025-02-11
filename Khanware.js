@@ -1,5 +1,5 @@
 const ver = "V0.0.1";
-const repoPath = "https://raw.githubusercontent.com/Niximkk/Khanware/refs/heads/main/"
+const repoPath = "https://raw.githubusercontent.com/Koolsdaad/khanescolam/refs/heads/main/"
 
 
 let device = {
