@@ -73,9 +73,14 @@ if (device.mobile) watermark.style.left = '55%'
 
 let ver = "V0.0.1";
 
-watermark.innerHTML = `<img src="https://i.postimg.cc/dVYRjYqr/unnamed-removebg-preview.png" 
-style="width: 25px; height: 25px; border-radius: 5px;"> 
-<span style="color:gray; padding-left:2px; font-family: Arial, sans-serif; font-size:10px">${ver}</span>`;
+watermark.innerHTML = `
+    <img src="https://i.postimg.cc/dVYRjYqr/unnamed-removebg-preview.png" 
+        style="width: 25px; height: 25px; border-radius: 5px; vertical-align: middle;"> 
+    <span style="color: gray; padding-left: 5px; font-family: Arial, sans-serif; font-size: 10px; vertical-align: middle;">
+        Lunaris - ${ver}
+    </span>
+`;
+
 
 
 document.body.appendChild(watermark);
