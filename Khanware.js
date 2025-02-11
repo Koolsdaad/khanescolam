@@ -65,8 +65,27 @@ const findAndClickByClass = className => { const element = document.querySelecto
 
 function sendToast(text, duration=5000, gravity='bottom') { Toastify({ text: text, duration: duration, gravity: gravity, position: "center", stopOnFocus: true, style: { background: "#000000" } }).showToast(); debug(text); };
 
-async function showSplashScreen() { splashScreen.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;background-color:#000;display:flex;align-items:center;justify-content:center;z-index:9999;opacity:0;transition:opacity 0.5s ease;user-select:none;color:white;font-family:MuseoSans,sans-serif;font-size:30px;text-align:center;"; splashScreen.innerHTML = '<span style="color:white;"></span><span style="color:##165af7;">LUNARIS</span>'; document.body.appendChild(splashScreen); setTimeout(() => splashScreen.style.opacity = '1', 10);};
-async function hideSplashScreen() { splashScreen.style.opacity = '0'; setTimeout(() => splashScreen.remove(), 1000); };
+async function showSplashScreen() {
+    // Adiciona a logo do Lunaris ao lado da palavra "LUNARIS"
+    splashScreen.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;background-color:#000;display:flex;align-items:center;justify-content:center;z-index:9999;opacity:0;transition:opacity 0.5s ease;user-select:none;color:white;font-family:MuseoSans,sans-serif;font-size:30px;text-align:center;";
+
+    // HTML modificado para incluir a logo do Lunaris à esquerda do texto
+    splashScreen.innerHTML = `
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <img src="https://i.ibb.co/5h9MHdm3/imagem-2025-02-10-204310086.png" alt="Logo Lunaris" style="width: 50px; height: 50px; margin-right: 15px;" />
+            <span style="color:#0044ff;">LUNARIS</span>
+        </div>
+    `;
+
+    document.body.appendChild(splashScreen);
+    setTimeout(() => splashScreen.style.opacity = '1', 10);
+}
+
+async function hideSplashScreen() {
+    splashScreen.style.opacity = '0';
+    setTimeout(() => splashScreen.remove(), 1000);
+};
+
 
 async function loadScript(url, label) { return fetch(url).then(response => response.text()).then(script => { loadedPlugins.push(label); eval(script); }); }
 async function loadCss(url) { return new Promise((resolve) => { const link = document.createElement('link'); link.rel = 'stylesheet'; link.type = 'text/css'; link.href = url; link.onload = () => resolve(); document.head.appendChild(link); }); }
