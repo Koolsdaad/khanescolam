@@ -1,7 +1,7 @@
 const phrases = [ 
-    "Aproveite o Lunaris",
-    "Mantenha isso longe de professores.",
-    "Lunaris",
+    "Aproveite o Lunaris.",
+    "Use por sua responsabilidade.",
+    "Lunaris.",
     "Dúvidas? Entre no nosso discord."
     "https://discord.gg/PMbWMHKVfh"
 ];
