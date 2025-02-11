@@ -3,6 +3,7 @@ const phrases = [
     "Mantenha isso longe de professores.",
     "Lunaris",
     "Dúvidas? Entre no nosso discord."
+    "https://discord.gg/PMbWMHKVfh"
 ];
 
 setInterval(() => { 
