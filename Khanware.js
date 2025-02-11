@@ -72,7 +72,7 @@ async function showSplashScreen() {
     // HTML modificado para incluir a logo do Lunaris à esquerda do texto
     splashScreen.innerHTML = `
         <div style="display: flex; align-items: center; justify-content: center;">
-            <img src="URL_DA_LOGO_DO_LUNARIS" alt="Logo Lunaris" style="width: 50px; height: 50px; margin-right: 15px;" />
+            <img src="https://i.ibb.co/5h9MHdm3/imagem-2025-02-10-204310086.png" alt="Logo Lunaris" style="width: 50px; height: 50px; margin-right: 15px;" />
             <span style="color:#0044ff;">LUNARIS</span>
         </div>
     `;
