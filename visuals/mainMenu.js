@@ -114,23 +114,23 @@ dropdownMenu.innerHTML = `
 watermark.appendChild(dropdownMenu);
 
 let featuresList = [
-    [{ name: 'questionSpoof', type: 'checkbox', variable: 'features.questionSpoof', attributes: 'checked', labeled: true, label: 'Question Spoof' },
-    { name: 'videoSpoof', type: 'checkbox', variable: 'features.videoSpoof', attributes: 'checked', labeled: true, label: 'Video Spoof' },
-    { name: 'showAnswers', type: 'checkbox', variable: 'features.showAnswers', labeled: true, label: 'Answer Revealer' }],
-    [{ name: 'autoAnswer', type: 'checkbox', variable: 'features.autoAnswer', dependent: 'autoAnswerDelay,nextRecomendation,repeatQuestion', labeled: true, label: 'Auto Answer' },
-    { name: 'repeatQuestion', className: 'repeatQuestion', type: 'checkbox', variable: 'features.repeatQuestion', attributes: 'style="display:none;"', labeled: true, label: 'Repeat Question' },
-    { name: 'nextRecomendation', className: 'nextRecomendation', type: 'checkbox', variable: 'features.nextRecomendation', attributes: 'style="display:none;"', labeled: true, label: 'Recomendations' },
+    [{ name: 'Hackear questões', type: 'checkbox', variable: 'features.questionSpoof', attributes: 'checked', labeled: true, label: 'Hackear questões' },
+    { name: 'Pular Videos', type: 'checkbox', variable: 'features.videoSpoof', attributes: 'checked', labeled: true, label: 'Pular Videos' },
+    { name: 'Mostrar Respostas', type: 'checkbox', variable: 'features.showAnswers', labeled: true, label: 'Mostrar Respostas' }],
+    [{ name: 'Auto Atividade', type: 'checkbox', variable: 'features.autoAnswer', dependent: 'autoAnswerDelay,nextRecomendation,repeatQuestion', labeled: true, label: 'Auto Atividade' },
+    { name: 'Refazer Atividade', className: 'repeatQuestion', type: 'checkbox', variable: 'features.repeatQuestion', attributes: 'style="display:none;"', labeled: true, label: 'Repetir Atividade' },
+    { name: 'Proxima Atividade', className: 'nextRecomendation', type: 'checkbox', variable: 'features.nextRecomendation', attributes: 'style="display:none;"', labeled: true, label: 'Recomendations' },
     { name: 'autoAnswerDelay', className: 'autoAnswerDelay', type: 'range', variable: 'features.autoAnswerDelay', attributes: 'style="display:none;" min="1" max="3" value="1"', labeled: false }],
-    [{ name: 'minuteFarm', type: 'checkbox', variable: 'features.minuteFarmer', labeled: true, label: 'Minute Farmer' },
-    { name: 'customBanner', type: 'checkbox', variable: 'features.customBanner', labeled: true, label: 'Custom Banner' },
+    [{ name: 'Tempo', type: 'checkbox', variable: 'features.minuteFarmer', labeled: true, label: 'Tempo' },
+    { name: 'Banner Customizado', type: 'checkbox', variable: 'features.customBanner', labeled: true, label: 'Banner Customizado' },
     { name: 'Lunaris Logo', type: 'checkbox', variable: 'features.rgbLogo', labeled: true, label: 'Lunaris Logo' }],
-    [{ name: 'darkMode', type: 'checkbox', variable: 'features.darkMode', attributes: 'checked', labeled: true, label: 'Dark Mode' },
+    [{ name: 'Modo Escuro', type: 'checkbox', variable: 'features.darkMode', attributes: 'checked', labeled: true, label: 'Modo Escuro' },
     { name: 'onekoJs', type: 'checkbox', variable: 'features.onekoJs', labeled: true, label: 'onekoJs' }]
 ]
 if (!device.apple) {
     featuresList.push(
-        [{ name: 'Custom Username', type: 'nonInput' }, { name: 'customName', type: 'text', variable: 'featureConfigs.customUsername', attributes: 'autocomplete="off"' }],
-        [{ name: 'Custom pfp', type: 'nonInput' }, { name: 'customPfp', type: 'text', variable: 'featureConfigs.customPfp', attributes: 'autocomplete="off"' }]
+        [{ name: 'Nome Customizado', type: 'nonInput' }, { name: 'Nome Customizado', type: 'text', variable: 'featureConfigs.customUsername', attributes: 'autocomplete="off"' }],
+        [{ name: 'Imagem Customizada', type: 'nonInput' }, { name: 'Imagem Customizada', type: 'text', variable: 'featureConfigs.customPfp', attributes: 'autocomplete="off"' }]
     );
 }
 
