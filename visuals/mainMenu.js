@@ -15,6 +15,14 @@ function addFeature(features) {
                 });
             }
 
+function modifyKhanAcademyText() {
+    const elements = document.querySelectorAll('p._1kens1z');
+    if (elements.length >= 2) {
+        elements[0].innerText = "Nós somos o Lunaris, um software em JavaScript com base no código de KhanWare, nosso objetivo é ajudar alunos que precisam de nota a conseguirem ela de um jeito fácil.";
+        elements[1].innerText = "O Lunaris é uma ferramenta sem fins lucrativos criada para facilitar a vida acadêmica.";
+    }
+}
+            
             if (attribute.variable) element.setAttribute('setting-data', attribute.variable);
             if (attribute.dependent) element.setAttribute('dependent', attribute.dependent);
             if (attribute.className) element.classList.add(attribute.className);
